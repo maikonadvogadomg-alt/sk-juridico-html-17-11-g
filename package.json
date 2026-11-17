@@ -1,0 +1,51 @@
+{
+  "name": "sk-juridico-html-17-11-g",
+  "version": "1.0.0",
+  "description": "SK-Juridico-HTML-17-11-G",
+  "author": "Maikon",
+  "private": true,
+  "main": "electron/main.cjs",
+  "portaDoPrograma": 7750,
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.maikonadvogadomgalt.skjuridicohtml1711g.pc",
+    "productName": "SK-Juridico-HTML-17-11-G",
+    "executableName": "sk-juridico-html-17-11-g",
+    "directories": {
+      "output": "release"
+    },
+    "asar": false,
+    "files": [
+      "**/*",
+      "!android/**",
+      "!.github/**",
+      "!release/**",
+      "!exe/**",
+      "!node_modules/.cache/**",
+      "!*.zip",
+      "!.sk/**",
+      "!apk.config.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "icons/icon-512.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "SK-Juridico-HTML-17-11-G",
+      "artifactName": "sk-juridico-html-17-11-g-Instalar.exe"
+    },
+    "portable": {
+      "artifactName": "sk-juridico-html-17-11-g-sem-instalar.exe"
+    }
+  }
+}
